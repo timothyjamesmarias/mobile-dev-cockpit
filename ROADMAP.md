@@ -18,16 +18,16 @@ The goal is a working vertical slice — one platform (iOS), core verbs, basic t
 
 ### 0.0 — Project scaffold
 
-- [ ] Eask file with metadata + deps (`transient`, `compat`)
-- [ ] Makefile (`compile`, `test`, `lint`, `check`, `clean`)
-- [ ] `lisp/mdc.el` — package header, defgroup, requires
-- [ ] `test/` directory with a single passing no-op ert test
-- [ ] Confirm `make check` passes from a clean state
-- [ ] `make test-apps` target to shallow-clone test apps (not tracked in git):
+- [x] Eask file with metadata + deps (`transient`, `compat`)
+- [x] Makefile (`compile`, `test`, `lint`, `check`, `clean`)
+- [x] `lisp/mdc.el` — package header, defgroup, requires
+- [x] `test/` directory with a single passing no-op ert test
+- [x] Confirm `make check` passes from a clean state
+- [x] `make test-apps` target to shallow-clone test apps (not tracked in git):
   - iOS: [Apple Food Truck](https://github.com/apple/sample-food-truck) → `test-apps/ios/`
   - Android: [Now in Android](https://github.com/android/nowinandroid) → `test-apps/android/`
-- [ ] Add `test-apps/` to `.gitignore` (entire directory — fixtures are committed separately in `test/fixtures/`)
-- [ ] Verify both test apps build: `xcodebuild` for Food Truck, `./gradlew assembleDebug` for Now in Android
+- [x] Add `test-apps/` to `.gitignore` (entire directory — fixtures are committed separately in `test/fixtures/`)
+- [x] Verify both test apps build: `xcodebuild` for Food Truck, `./gradlew assembleDebug` for Now in Android
 
 **Gate:** `eask test ert` and `eask compile` both exit 0. Both test apps build successfully.
 
